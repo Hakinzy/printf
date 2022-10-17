@@ -1,13 +1,15 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: the character to print
- * Return: 1 for success and -1 for error,
- * the error is set appropriately
+ * _puts - prints a string with newline
+ * @str: the string to print
+ * Return:( str-a)
  */
-
-int _putchar(char c)
+int _puts(char *str)
 {
-	return (write(1, &c, 1));
+	char *a = str;/*declaration of variables*/
+
+	while (*str)
+		_putchar(*str++);
+	return (str - a);
 }
